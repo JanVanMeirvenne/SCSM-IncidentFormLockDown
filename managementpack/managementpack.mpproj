@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,13 +36,13 @@
   </ItemGroup>
   <ItemGroup>
     <ManagementPackReference Include="Microsoft.EnterpriseManagement.ServiceManager.UI.Console">
-      <HintPath>D:\OneDrive - Inovativ\Projects\VDW\SCSM\dev2\VDW.CI\References2016\references\MP\Microsoft.EnterpriseManagement.ServiceManager.UI.Console.mp</HintPath>
+      <HintPath>_references\Microsoft.EnterpriseManagement.ServiceManager.UI.Console.mp</HintPath>
       <Alias>Console</Alias>
       <MinVersion>7.5.7487.0</MinVersion>
       <PackageToBundle>False</PackageToBundle>
     </ManagementPackReference>
     <ManagementPackReference Include="ServiceManager.IncidentManagement.Library">
-      <HintPath>D:\OneDrive - Inovativ\Projects\VDW\SCSM\dev2\VDW.CI\References2016\references\MP\ServiceManager.IncidentManagement.Library.mp</HintPath>
+      <HintPath>_references\ServiceManager.IncidentManagement.Library.mp</HintPath>
       <Alias>Alias_9b102828_ab21_450c_af3c_5c2c9abc3948</Alias>
       <MinVersion>7.5.7487.0</MinVersion>
       <PackageToBundle>False</PackageToBundle>
@@ -85,8 +85,34 @@
     </ManagementPackReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Custom.SM.IR.UserControlOverride\Custom.SM.IR.UserControlOverride.csproj">
-      <Name>Custom.SM.IR.UserControlOverride</Name>
+    <Folder Include="_references" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_references\Microsoft.EnterpriseManagement.ServiceManager.UI.Console.mp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_references\ServiceManager.IncidentManagement.Library.mp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_references\System.Knowledge.Library.mp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_references\System.Library.mp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_references\System.SupportingItem.Library.mp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_references\System.WorkItem.Activity.Library.mp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_references\System.WorkItem.Incident.Library.mp">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\usercontrol\usercontrol.csproj">
+      <Name>usercontrol</Name>
       <Project>{c2ef3215-bc1e-4941-a25c-14a2d486211d}</Project>
       <Private>True</Private>
       <PackageToBundle>True</PackageToBundle>

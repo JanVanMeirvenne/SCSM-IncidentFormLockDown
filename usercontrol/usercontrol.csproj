@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -34,59 +34,47 @@
   <ItemGroup>
     <Reference Include="Microsoft.EnterpriseManagement.Core, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.Core.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.ServiceManager.Application.Common">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.ServiceManager.Application.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.EnterpriseManagement.ServiceManager.Connector.SMS">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.ServiceManager.Connector.SMS.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.ServiceManager.Application.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.ConsoleFramework, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.ConsoleFramework.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.ConsoleFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.Controls">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.Controls.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.Controls.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.Core">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.Core.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.FormsInfra">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.FormsInfra.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.FormsInfra.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.Foundation">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.Foundation.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.Foundation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.SdkDataAccess">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.SdkDataAccess.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.SdkDataAccess.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.EnterpriseManagement.UI.SMControls">
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.SMControls.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.EnterpriseManagement.UI.ViewFramework, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\VDW.CI\References2016\references\DLL\Microsoft.EnterpriseManagement.UI.ViewFramework.dll</HintPath>
+      <HintPath>..\_references\Microsoft.EnterpriseManagement.UI.SMControls.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -127,6 +115,21 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_references\Microsoft.EnterpriseManagement.Core.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.ServiceManager.Application.Common.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.ServiceManager.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.ConsoleFramework.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.Controls.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.Core.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.ExtendedControls.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.Extensions.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.FormsInfra.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.Foundation.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.SdkDataAccess.dll" />
+    <Content Include="_references\Microsoft.EnterpriseManagement.UI.SMControls.dll" />
+    <Content Include="_references\WPFToolKit.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

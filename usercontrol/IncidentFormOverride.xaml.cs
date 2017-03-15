@@ -29,6 +29,7 @@ namespace Custom.SM.IR.UserControlOverride
             InitializeComponent();
         }
 
+        // borrowed helper function to get the container-control by name. We use this to break out of our custom user control and access other controls in the form.
         private DependencyObject GetParentDependancyObject(DependencyObject child, string name)
         {
             try
@@ -58,17 +59,20 @@ namespace Custom.SM.IR.UserControlOverride
 
         private void UserControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
+            // because the datacontext can change multiple times during the form's open-time, we only execute the code once and use the _init flag
+            // to mark the form restriction as complete
             if (!_init)
             {
+                // Only execute the restriction code if the form is not in template-mode, and the user is not an administrator
                 if (!ConsoleContextHelper.Instance.UserRoleHelper.IsUserAdministrator &&
                     !FormUtilities.Instance.IsFormInTemplateMode(Window.GetWindow(this)))
                 {
-                    //Get tab item
+                    // get the general-tab control of the incident form
                     DependencyObject doTabControl = GetParentDependancyObject(this, "System.Windows.Controls.TabControl");
                     TabControl tc = (TabControl) doTabControl;
                     TabItem tabitem_general = (TabItem) tc.FindName("TabItem_General");
 
-
+                    // lockdown the target controls
                     UserPicker userPicker = (UserPicker) tabitem_general.FindName("AssignedTo");
                     userPicker.IsReadOnly = true;
                     ListPicker listPicker = (ListPicker) tabitem_general.FindName("SupportGroup");
